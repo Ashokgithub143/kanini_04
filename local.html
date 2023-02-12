@@ -1,0 +1,39 @@
+!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <script>
+        function fetch() {
+            document.getElementById("data").innerHTML = JSON.parse(localStorage.getItem("txtValue"));
+            document.getElementById("data1").innerHTML = localStorage.getItem("txtValue1");
+            document.getElementById("data2").innerHTML = localStorage.getItem("txtValue2");
+            document.getElementById("data3").innerHTML = localStorage.getItem("txtValue3");
+        }
+    </script>
+</head>
+
+
+
+</html>
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <fieldset style="width: fit-content; margin: 0 auto; font-size: 30px;">
+        <form name="f1" action="form1.html" method="get" autocomplete="off">
+            <legend>Sign Up Form</legend>
+            <label>Email:<br />
+                <input type="text" name="email" id="email" /></label><br />
+            <label>Password<br />
+                <input type="text" name="password" id="password" /></label><br>
+            <label>Mobile:<br />
+                <input type="text" name="mobile" id="mobile" /></label><br />
+            <label>Telephone:<br />
+                <input type="text" name="telephone" id="telephone" /></label><br>
+            <input type="submit" value="Submit" onclick="fetch()">
+        </form>
+</body>
+
+</html>

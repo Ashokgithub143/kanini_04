@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fetch()
+        {
+            var selected_book=""
+            horror=document.getElementById("b1");
+            thriller=document.getElementById("b2");
+            action=document.getElementById("b3");
+
+            if(horror.checked==true) {
+                selected_book+="horror";
+            }
+            if(thriller.checked==true) {
+                selected_book+="thriller";
+            }
+            if(action.checked==true) {
+                selected_book+="action";
+            }
+            document.getElementById("Book").innerHTML="your zonar is" + selected_book;
+
+
+        } 
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend>Customer Info</legend>
+    <form name="Book" action="">
+        <table>
+            <tr>
+                <td><label for="name" style="background-color: burlywood;">Name:</label></td>
+                <td><input type="text" name="name" id=""></td>
+            </tr>
+            <tr>
+                <td><label for="Telephone" style="background-color: azure;">Telephone:</label></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td><label for="Email Address" style="background-color: brown;">Email Address:</label></td>
+                <td><input type="text"></td>
+            </tr>
+
+           
+        </table>
+        <fieldset>
+
+            <legend>Book</legend>
+            <tr>
+                <td><label for="books" style="background-color: cadetblue;">books</label></td>
+                <td><input type="checkbox" name="b1" value="horror" id="b1">horror</td>
+                <td><input type="checkbox" name="b2" value="thriller" id="b2">thriller</td>
+                <td><input type="checkbox" name="b3" value="action" id="b3">action</td>
+                
+            </tr>
+            <tr>
+                <td><label for="Quantity">Quantity</label></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="submit" onclick="fetch();"></td>
+            </tr>
+        </fieldset>
+
+    </form>
+    <p id="Book"></p>
+</fieldset>
+</body>
+</html>
